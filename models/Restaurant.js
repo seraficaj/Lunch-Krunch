@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
-const Schema = require mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const restaurantSchema = new Schema({
-   name: String,
+   name: {type: String, required: true},
+   tasteRating: Number,
+   valueRating: Number,
    //collection of available items
    // menu: [MenuItems]
 

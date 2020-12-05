@@ -10,4 +10,8 @@ router.get('/show', (req, res) => {
    res.render('restaurants/show');
  });
 
+ router.get('/new', (req, res) => {
+   res.render('restaurants/new');
+ });
+
 module.exports = router;
