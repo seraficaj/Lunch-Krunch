@@ -1,12 +1,45 @@
-<!DOCTYPE html>
-<html>
-<title>Lunch Krunch Budget Tracker</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" hfref="stylesheets/style.css">
-<script defer src="javascripts/app.js"></script>
-<body>
-  <h1>Lunch Krunch</h1>
-</body>
-</html>
+<%- include('partials/header') %>
+
+<!-- Header -->
+<div class="w3-container" style="margin-top:80px" id="showcase">
+   <h1 class="w3-jumbo"><b>Lunch Krunch</b></h1>
+   <h1 class="w3-xxxlarge w3-text-red"><b>Why track your lunch budget?</b></h1>
+   <hr style="width:50px;border:5px solid red" class="w3-round">
+   <p>Bringing leftovers or cooking your own lunch can save lots of money and prevent waste compared to buying takeout food or eating at restaurants when you eat lunch at work or school.</p>
+</div>
+
+<div class="w3-row-padding">
+   <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+         <li class="w3-dark-grey w3-xlarge w3-padding-32">Takeout Lunch</li>
+         <li class="w3-padding-16">Pick up food during break</li>
+         <li class="w3-padding-16">$8-10 per day</li>
+         <li class="w3-padding-16">Waste from disposable utensils</li>
+         <li class="w3-padding-16">Treat yourself once in a while</li>
+         <li class="w3-padding-16">
+            <h2 class="w3-red">Avg. $ 250 spent</h2>
+            <span class="w3-opacity">per month</span>
+         </li>
+         <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+         </li>
+      </ul>
+   </div>
+
+   <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+         <li class="w3-red w3-xlarge w3-padding-32">Bringing Food</li>
+         <li class="w3-padding-16">You already have food</li>
+         <li class="w3-padding-16">Less money spent per day</li>
+         <li class="w3-padding-16">Reusable lunch boxes</li>
+         <li class="w3-padding-16">Practice cooking</li>
+         <li class="w3-padding-16">
+            <h2 class="w3-green">Avg. $ 250 saved</h2>
+            <span class="w3-opacity">per month</span>
+         </li>
+         <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
+         </li>
+      </ul>
+   </div>
+</div>
