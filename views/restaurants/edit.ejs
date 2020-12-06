@@ -1,0 +1,38 @@
+<%- include('../partials/header-3') %>
+<div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-xxxlarge"><b>Edit Info for <%=restaurant.name %></b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="w3-container w3-red">
+        <h2>Update Restaurant Info</h2>
+    </div>
+    <form action="/restaurants/<%= restaurant.id %>?_method=PUT" method="POST">
+        <div class="w3-section">
+            <label class="w3-text-gray">Restaurant Name</label>
+            <input class="w3-input w3-border" type="text" name="name" value="<%= restaurant.name %>" required>
+        </div>
+        <div class="w3-section">
+            <label class="w3-text-gray">Taste Rating: </label>
+            <select class="w3-select" name="rating">
+                <option value="1">1 - Follow with mouthwash</option>
+                <option value="2">2 - Not likely to order again</option>
+                <option value="3">3 - Good, but could be better </option>
+                <option value="4">4 - Excellent! </option>
+                <option value="4">5 - Amazing!</option>
+            </select>
+        </div>
+        <div class="w3-section">
+            <label class="w3-text-gray">Value Rating: </label>
+            <select class="w3-select" name="value">
+                <option value="1">1 - not worth price at all</option>
+                <option value="2">2 - a bit pricy for portion size</option>
+                <option value="3">3 - reasonable </option>
+                <option value="4">4 - a good deal</option>
+                <option value="4">5 - get your money's worth</option>
+            </select>
+        </div>
+        <div class="w3-section">
+            <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Update Restaurant
+            </button>
+        </div>
+    </form>
+    <%- include('../partials/footer') %>

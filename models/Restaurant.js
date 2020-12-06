@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const restaurantSchema = new Schema({
    name: {type: String, required: true},
-   taste: Number,
+   rating: Number,
    value: Number,
    //collection of available items
    // menu: [MenuItems]

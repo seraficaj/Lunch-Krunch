@@ -5,9 +5,9 @@ module.exports  = {
     newRestaurantForm,
     create,
     show,
-    // deleteRestaurant,
-    // editForm,
-    // update
+    deleteRestaurant,
+    editForm,
+    update
 }
 
 function index(req,res) {
@@ -25,7 +25,7 @@ function newRestaurantForm(req,res) {
 function create(req,res) {
     const newRestaurant = new Restaurant({
         name: req.body.name,
-        taste: req.body.taste,
+        value: req.body.value,
         rating: req.body.value
     });
     newRestaurant.save((err) => {
@@ -38,4 +38,30 @@ function show(req,res) {
     Restaurant.findById(req.params.id, (err, foundRestaurant) => {
         res.render('restaurants/show', {restaurant: foundRestaurant});
     });
+}
+
+function deleteRestaurant(req,res){
+    console.log(req.params.id);
+    Restaurant.findByIdAndDelete(req.params.id, function (err) {
+        if (err) console.log(err);
+        res.redirect('/restaurants');
+    });
+}
+
+function editForm(req,res){
+    Restaurant.findById(req.params.id, (err, restaurant) => {
+        res.render('restaurants/edit', {restaurant});
+    });
+}
+
+function update(req,res){
+    console.log(req.body);
+    Restaurant.findByIdAndUpdate(req.params.id, {
+        name: req.body.name,
+        rating: req.body.rating,
+        value: req.body.value
+    }, function (err) {
+        if (err) console.log(err);
+        res.redirect('/restaurants');
+    })
 }

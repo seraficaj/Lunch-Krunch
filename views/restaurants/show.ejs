@@ -1,6 +1,12 @@
-<%- include('../partials/restaurants-header') %>
+<%- include('../partials/header-2') %>
 <div class="w3-container" style="margin-top:80px">
    <h1 class="w3-xxxlarge"><b><%= restaurant.name %></b></h1>
+   <h2 class="w3-xlarge">Rating: <%= restaurant.rating %></h2>
+   <h2 class="w3-xlarge">Value: <%= restaurant.value %></h2>
+      <a href="/restaurants/<%= restaurant.id %>/edit " class="w3-button w3-black w3-hover-black">Edit Info</a>
+      <form class="w3-margin-top" action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST">
+         <button type="submit" class="w3-button w3-red w3-hover-red">Delete</button>
+      </form>
    <hr style="width:50px;border:5px solid red" class="w3-round">
 </div>
 <div class="w3-row-padding w3-margin-top">
