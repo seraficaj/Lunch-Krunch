@@ -12,8 +12,10 @@ module.exports  = {
 
 function index(req,res) {
     Restaurant.find({}, (err,foundRestaurants) => {
-        res.render('restaurants/index', {restaurants: foundRestaurants});
-    })
+        res.render('restaurants/index', {
+            restaurants: foundRestaurants.sort((a, b) => (a.name > b.name) ? 1 : -1) 
+        })
+    });
 }
 
 function newRestaurantForm(req,res) {
