@@ -1,17 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const RestaurantsCtrl = require('../controllers/restaurants');
 
 /* GET users listing. */
-router.get('/', (req, res) => {
-  res.render('restaurants/index');
-});
-
-router.get('/show', (req, res) => {
-   res.render('restaurants/show');
- });
-
- router.get('/new', (req, res) => {
-   res.render('restaurants/new');
- });
+router.get('/', RestaurantsCtrl.index);
+router.post('/', RestaurantsCtrl.create)
+router.get('/new', RestaurantsCtrl.newRestaurantForm);
+router.get('/:id', RestaurantsCtrl.show);
 
 module.exports = router;

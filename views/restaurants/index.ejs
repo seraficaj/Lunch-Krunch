@@ -1,4 +1,4 @@
-<%- include('../partials/header') %>
+<%- include('../partials/restaurants-header') %>
 <div class="w3-container" style="margin-top:80px">
    <h1 class="w3-xxxlarge"><b>All Restaurants</b></h1>
    <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -9,13 +9,22 @@
       <tr>
         <th>Restaurant Name</th>
         <th>Rating</th>
-        <th>Avg. Meal Price</th>
+        <th>Value</th>
       </tr>
-      <tr>
+      <!-- <tr>
         <td><a href="/restaurants/show">Jille</a></td>
         <td>*****</td>
         <td>12.75</td>
-      </tr>
+      </tr> -->
+      <% restaurants.forEach(restaurant => { %>
+         <tr>
+            <td><a href="/restaurants/<%= restaurant.id %> "><%= restaurant.name %> </a></td>
+            <td>
+               <%= restaurant.rating %> / 5
+            </td>
+            <td><%= restaurant.value %> / 5</td>
+         </tr>
+      <% }) %>
    </table>
    <div class="w3-margin-top">
       <a href="/restaurants/new" class="w3-button w3-red w3-hover-black">Add Restaurant</a>

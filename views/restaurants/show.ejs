@@ -1,6 +1,6 @@
-<%- include('../partials/header') %>
+<%- include('../partials/restaurants-header') %>
 <div class="w3-container" style="margin-top:80px">
-   <h1 class="w3-xxxlarge"><b>Jillie</b></h1>
+   <h1 class="w3-xxxlarge"><b><%= restaurant.name %></b></h1>
    <hr style="width:50px;border:5px solid red" class="w3-round">
 </div>
 <div class="w3-row-padding w3-margin-top">
@@ -8,12 +8,12 @@
    <div class="w3-third">
       <div class="w3-card">
          <div class="w3-container w3-red">
-            <h4>Personal Pizza</h4>
+            <h4> Menu Item </h4>
          </div>
          <div class="w3-container">
             <h4>Taste: </h4>
             <h4>Value: </h4>
-            <h4>Ave. Price: </h4>
+            <h4>Price: </h4>
             <div class="w3-margin-bottom w3-center">
                <button class="w3-button w3-border">Edit</button>
                <button class="w3-button w3-border w3-border-red w3-hover-red">Delete</button>
