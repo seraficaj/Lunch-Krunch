@@ -8,7 +8,9 @@ router.post('/', RestaurantsCtrl.create)
 router.get('/new', RestaurantsCtrl.newRestaurantForm);
 router.get('/:id', RestaurantsCtrl.show);
 router.put('/:id/', RestaurantsCtrl.update);
-router.get('/:id/edit', RestaurantsCtrl.editForm);
 router.delete('/:id', RestaurantsCtrl.deleteRestaurant);
+router.get('/:id/addItem', RestaurantsCtrl.newMenuItem);
+router.get('/:id/edit', RestaurantsCtrl.editForm);
+
 
 module.exports = router;

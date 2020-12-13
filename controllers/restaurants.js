@@ -4,6 +4,8 @@ module.exports  = {
     index,
     newRestaurantForm,
     create,
+    newMenuItem,
+    createMenuItem,
     show,
     deleteRestaurant,
     editForm,
@@ -32,6 +34,14 @@ function create(req,res) {
         if (err) console.log(err);
         res.redirect('/restaurants')
     });
+}
+
+function newMenuItem(req,res) {
+   res.render('restaurants/newMenuItem')
+}
+
+function createMenuItem(req,res) {
+
 }
 
 function show(req,res) {
